@@ -1,0 +1,32 @@
+.hero {
+  width: 100%;
+  height: auto;
+}
+
+.video {
+  margin: 15px;
+  width: calc(100% - 30px);
+  border-radius: 26px;
+}
+
+.description {
+  position: absolute;
+  top: 46%;
+  right: 8%;
+  max-width: 300px;
+  color: #fff;
+  font-size: 18px;
+  text-align: end;
+}
+
+.slogan {
+  position: absolute;
+  top: 84%;
+  left: 8%;
+  font-size: 68px;
+  font-weight: 600;
+  max-width: 550px;
+  color: #fff;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
