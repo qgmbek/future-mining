@@ -1,5 +1,8 @@
 .hero {
+  position: relative;
   width: 100%;
+  height: auto;
+  overflow: hidden;
   height: auto;
 }
 
@@ -21,7 +24,7 @@
 
 .slogan {
   position: absolute;
-  top: 84%;
+  top: 74%;
   left: 8%;
   font-size: 68px;
   font-weight: 600;
