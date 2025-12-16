@@ -4,6 +4,7 @@ import LogoMarquee from "./Components/LogoMarquee/LogoMarquess";
 import VideoContent from "./Components/videoContent/VideoContent";
 import ImageContent from "./Components/imageContent/ImageContent";
 import ImageContentTwo from "./Components/imageContent/ImageContentTwo";
+import FAQ from "./Components/Accordion/Accordion";
 import "./App.css";
 
 function App() {
@@ -96,6 +97,7 @@ function App() {
 
       {/* ImageContentTwo renders when scrolled into view */}
       <div ref={imageTwoRef}>{showImageTwo && <ImageContentTwo />}</div>
+      <FAQ />
     </>
   );
 }
