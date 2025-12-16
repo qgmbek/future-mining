@@ -1,0 +1,89 @@
+.imagesContainer {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 140px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.imageContentsTitle {
+  font-size: 38px;
+  width: fit-content;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagesOne {
+  display: flex;
+  margin-left: 100px;
+}
+
+.mainImage {
+  width: 60vw;
+  height: 86vh;
+  object-fit: cover;
+  border-radius: 26px;
+  clip-path: inset(0 100% 0 0);
+  animation: revealLeftToRight 2s ease-out forwards;
+}
+
+.textImage {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #313131;
+}
+
+.addsImage {
+  width: 20vw;
+  height: 36vh;
+  margin-left: 100px;
+  object-fit: cover;
+  border-radius: 26px;
+
+  clip-path: inset(0 100% 0 0);
+  animation: revealLeftToRight 2s ease-out forwards;
+}
+.textImageAdds {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 100px;
+  padding-left: 10px;
+  color: #313131;
+}
+
+@keyframes revealLeftToRight {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.imagesTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.addsImageTwo {
+  width: 20vw;
+  height: 36vh;
+  object-fit: cover;
+  border-radius: 26px;
+  clip-path: inset(0 100% 0 0);
+  animation: revealLeftToRight 2s ease-out forwards;
+}
+.textImageAddsTwo {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 300px;
+  padding-left: 10px;
+  color: #313131;
+}
