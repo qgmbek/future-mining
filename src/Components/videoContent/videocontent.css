@@ -1,0 +1,64 @@
+.videoContentContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.videoContent {
+  margin: 15px;
+  width: calc(100% - 30px);
+  border-radius: 26px;
+}
+
+.videoTitle {
+  font-size: 42px;
+  font-weight: 700;
+  position: absolute;
+  top: 66px;
+  left: 66px;
+  max-width: 660px;
+  color: #fff;
+}
+
+.boxes {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxOne,
+.boxTwo,
+.boxThree {
+  width: 360px;
+  height: 300px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 52px;
+  height: auto;
+}
+
+.boxTitle {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #272727;
+}
+
+.boxDescription {
+  font-size: 18px;
+  color: #4f4f4f;
+}
