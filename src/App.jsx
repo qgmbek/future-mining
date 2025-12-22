@@ -11,19 +11,15 @@ function App() {
   const text =
     "We are redefining the future of mining through cutting-edge innovation, sustainable practices, and unmatched precision. Our mission is to responsibly harness the earth’s resources while safeguarding the planet, leveraging advanced technology and visionary solutions to deliver lasting value for communities, industries, and generations to come.";
 
-  // Intro text animation
   const introRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
-  // ImageContent (first)
   const imageRef = useRef(null);
-  const [showImage, setShowImage] = useState(false);
-
-  // ImageContentTwo (second)
   const imageTwoRef = useRef(null);
+
+  const [showImage, setShowImage] = useState(false);
   const [showImageTwo, setShowImageTwo] = useState(false);
 
-  // Observer for intro text
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -36,38 +32,33 @@ function App() {
     );
 
     if (introRef.current) observer.observe(introRef.current);
+
     return () => observer.disconnect();
   }, []);
 
-  // Observer for ImageContent
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShowImage(true);
-          observer.disconnect();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          if (entry.target.dataset.section === "one") {
+            setShowImage(true);
+          }
+
+          if (entry.target.dataset.section === "two") {
+            setShowImageTwo(true);
+          }
+
+          observer.unobserve(entry.target);
+        });
       },
-      { threshold: 0.2 }
+      { threshold: 0.3 }
     );
 
     if (imageRef.current) observer.observe(imageRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  // Observer for ImageContentTwo
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShowImageTwo(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
     if (imageTwoRef.current) observer.observe(imageTwoRef.current);
+
     return () => observer.disconnect();
   }, []);
 
@@ -92,11 +83,13 @@ function App() {
       <LogoMarquee />
       <VideoContent />
 
-      {/* ImageContent renders when scrolled into view */}
-      <div ref={imageRef}>{showImage && <ImageContent />}</div>
+      <div ref={imageRef} data-section="one">
+        {showImage && <ImageContent />}
+      </div>
+      <div ref={imageTwoRef} data-section="two">
+        {showImageTwo && <ImageContentTwo />}
+      </div>
 
-      {/* ImageContentTwo renders when scrolled into view */}
-      <div ref={imageTwoRef}>{showImageTwo && <ImageContentTwo />}</div>
       <FAQ />
     </>
   );
