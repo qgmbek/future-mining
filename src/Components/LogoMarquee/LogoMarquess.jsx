@@ -23,13 +23,13 @@ export default function LogoMarquee() {
 
   return (
     <section className="marquee">
-      <div className="marquee__fade marquee__fade--left" />
-      <div className="marquee__fade marquee__fade--right" />
+      <div className="marquee_fade marquee_fade_left" />
+      <div className="marquee_fade marquee_fade_right" />
 
-      <div className="marquee__viewport">
-        <div ref={trackRef} className="marquee__track">
+      <div className="marquee_viewport">
+        <div ref={trackRef} className="marquee_track">
           {logos.map((src, i) => (
-            <div className="marquee__item" key={i}>
+            <div className="marquee_item" key={i}>
               <img src={src} alt="client logo" loading="lazy" />
             </div>
           ))}

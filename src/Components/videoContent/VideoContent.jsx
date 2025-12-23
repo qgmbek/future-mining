@@ -27,12 +27,12 @@ export default function VideoContent() {
         className="boxes"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div
           className="boxOne"
           variants={{
-            hidden: { x: 150, zIndex: 3 },
+            hidden: { x: 180, zIndex: 3 },
             visible: { x: 0 },
           }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -68,7 +68,7 @@ export default function VideoContent() {
         <motion.div
           className="boxThree"
           variants={{
-            hidden: { x: -150, zIndex: 3 },
+            hidden: { x: -180, zIndex: 3 },
             visible: { x: 0 },
           }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}

@@ -12,10 +12,9 @@ export default function Hero() {
         className="video"
         playsInline
       />
-
       <motion.div
         className="description"
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -130, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
@@ -23,10 +22,9 @@ export default function Hero() {
         precision, and environmental stewardship redefine how resources are
         discovered, extracted, and preserved.
       </motion.div>
-
       <motion.div
         className="slogan"
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -150, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
       >

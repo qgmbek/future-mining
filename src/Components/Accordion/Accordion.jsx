@@ -5,31 +5,31 @@ const faqs = [
   {
     question: "How long does it take to install solar panels?",
     answer:
-      "Most residential solar installations are completed within 1–3 days, depending on system size and site conditions."
+      "Most residential solar installations are completed within 1–3 days, depending on system size and site conditions.",
   },
   {
     question: "What services do you offer for businesses?",
     answer:
-      "We provide end-to-end solar solutions for businesses, including design, installation, monitoring, and ongoing support."
+      "We provide end-to-end solar solutions for businesses, including design, installation, monitoring, and ongoing support.",
   },
   {
     question: "Do you offer warranties on your products?",
     answer:
-      "Yes. Our solar panels typically come with a 25-year performance warranty, along with workmanship guarantees."
+      "Yes. Our solar panels typically come with a 25-year performance warranty, along with workmanship guarantees.",
   },
   {
     question: "Can small businesses benefit from your services?",
     answer:
-      "Absolutely. Our systems are scalable and designed to meet the needs and budgets of small and growing businesses."
+      "Absolutely. Our systems are scalable and designed to meet the needs and budgets of small and growing businesses.",
   },
   {
     question: "What kind of maintenance is required for solar systems?",
     answer:
-      "Solar systems require minimal maintenance—mainly occasional cleaning and periodic system health checks."
-  }
+      "Solar systems require minimal maintenance—mainly occasional cleaning and periodic system health checks.",
+  },
 ];
 
-export default function FAQ() {
+export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -40,7 +40,9 @@ export default function FAQ() {
     <section className="faq-section">
       <div className="faq-left">
         <h2>
-          Here are some frequently<br />asked questions
+          Here are some frequently
+          <br />
+          asked questions
         </h2>
         <p>
           Better Energy Starts Here that is Powered by Advanced Solar Materials

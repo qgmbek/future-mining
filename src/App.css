@@ -1,6 +1,14 @@
+* {
+  font-family: "IBM Plex Sans", system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .hero {
   position: relative;
-
   width: 100%;
   height: 126vh;
 }
@@ -22,5 +30,3 @@
 .letter.visible {
   opacity: 1;
 }
-
-

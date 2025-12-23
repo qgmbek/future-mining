@@ -4,7 +4,7 @@ import LogoMarquee from "./Components/LogoMarquee/LogoMarquess";
 import VideoContent from "./Components/videoContent/VideoContent";
 import ImageContent from "./Components/imageContent/ImageContent";
 import ImageContentTwo from "./Components/imageContent/ImageContentTwo";
-import FAQ from "./Components/Accordion/Accordion";
+import Accordions from "./Components/Accordion/Accordion";
 import "./App.css";
 
 function App() {
@@ -13,12 +13,6 @@ function App() {
 
   const introRef = useRef(null);
   const [visible, setVisible] = useState(false);
-
-  const imageRef = useRef(null);
-  const imageTwoRef = useRef(null);
-
-  const [showImage, setShowImage] = useState(false);
-  const [showImageTwo, setShowImageTwo] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,32 +26,6 @@ function App() {
     );
 
     if (introRef.current) observer.observe(introRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          if (entry.target.dataset.section === "one") {
-            setShowImage(true);
-          }
-
-          if (entry.target.dataset.section === "two") {
-            setShowImageTwo(true);
-          }
-
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imageRef.current) observer.observe(imageRef.current);
-    if (imageTwoRef.current) observer.observe(imageTwoRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -83,14 +51,10 @@ function App() {
       <LogoMarquee />
       <VideoContent />
 
-      <div ref={imageRef} data-section="one">
-        {showImage && <ImageContent />}
-      </div>
-      <div ref={imageTwoRef} data-section="two">
-        {showImageTwo && <ImageContentTwo />}
-      </div>
+      <ImageContent />
+      <ImageContentTwo />
 
-      <FAQ />
+      <Accordions />
     </>
   );
 }

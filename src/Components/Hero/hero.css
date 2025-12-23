@@ -14,8 +14,8 @@
 
 .description {
   position: absolute;
-  top: 46%;
-  right: 8%;
+  top: 42%;
+  right: 5%;
   max-width: 300px;
   color: #fff;
   font-size: 18px;
@@ -24,8 +24,8 @@
 
 .slogan {
   position: absolute;
-  top: 74%;
-  left: 8%;
+  top: 68%;
+  left: 6%;
   font-size: 68px;
   font-weight: 600;
   max-width: 550px;
