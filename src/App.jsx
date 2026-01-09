@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Hero from "./Components/Hero/Hero";
 import LogoMarquee from "./Components/LogoMarquee/LogoMarquess";
+import QuickFactsSection from "./Components/QuickFactsSection/QuickFactsSection";
 import VideoContent from "./Components/videoContent/VideoContent";
 import ImageContent from "./Components/imageContent/ImageContent";
 import ImageContentTwo from "./Components/imageContent/ImageContentTwo";
@@ -50,6 +51,7 @@ function App() {
       </div>
 
       <LogoMarquee />
+      <QuickFactsSection />
       <VideoContent />
 
       <ImageContent />
