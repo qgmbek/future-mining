@@ -5,6 +5,7 @@ import VideoContent from "./Components/videoContent/VideoContent";
 import ImageContent from "./Components/imageContent/ImageContent";
 import ImageContentTwo from "./Components/imageContent/ImageContentTwo";
 import Accordions from "./Components/Accordion/Accordion";
+import Footer from "./Components/Footer/footer";
 import "./App.css";
 
 function App() {
@@ -55,6 +56,8 @@ function App() {
       <ImageContentTwo />
 
       <Accordions />
+
+      <Footer />
     </>
   );
 }
