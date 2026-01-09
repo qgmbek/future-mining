@@ -1,11 +1,15 @@
 import "./videocontent.css";
 import { motion } from "framer-motion";
+import videoContent from "../../assets/videoContent.mp4";
+import icon1 from "../../assets/icon1.svg";
+import icon2 from "../../assets/icon2.svg";
+import icon3 from "../../assets/icon3.svg";
 
 export default function VideoContent() {
   return (
     <div className="videoContentContainer">
       <video
-        src="/videoContent.mp4"
+        src={videoContent}
         autoPlay
         loop
         muted
@@ -37,7 +41,7 @@ export default function VideoContent() {
           }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <img src="/icon1.svg" alt="" className="icon" />
+          <img src={icon1} alt="Mining Equipment Icon" className="icon" />
           <div className="boxTexts">
             <div className="boxTitle">Mining Equipment</div>
             <div className="boxDescription">
@@ -55,7 +59,7 @@ export default function VideoContent() {
           }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.05 }}
         >
-          <img src="/icon2.svg" alt="" className="icon" />
+          <img src={icon2} alt="Site Infrastructure Icon" className="icon" />
           <div className="boxTexts">
             <div className="boxTitle">Site Infrastructure</div>
             <div className="boxDescription">
@@ -73,7 +77,7 @@ export default function VideoContent() {
           }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
         >
-          <img src="/icon3.svg" alt="" className="icon" />
+          <img src={icon3} alt="Systems Maintenance Icon" className="icon" />
           <div className="boxTexts">
             <div className="boxTitle">Systems Maintenance</div>
             <div className="boxDescription">

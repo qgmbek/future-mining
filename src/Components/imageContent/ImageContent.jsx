@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "./imageContent.css";
 import { motion } from "framer-motion";
 
+import image1 from "../../assets/image1.jpg";
+import image1a from "../../assets/image1a.jpg";
+
 export default function ImageContent() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -36,12 +39,16 @@ export default function ImageContent() {
 
           <div className="imagesOne">
             <div className="imageText">
-              <img src="image1.jpg" className="mainImage" />
+              <img
+                src={image1}
+                className="mainImage"
+                alt="GroundStar Project"
+              />
               <div className="textImage">GroundStar Project</div>
             </div>
 
             <div className="imageText">
-              <img src="image1a.jpg" className="addsImage" />
+              <img src={image1a} className="addsImage" alt="GroundStar" />
               <div className="textImageAdds">GroundStar</div>
             </div>
           </div>

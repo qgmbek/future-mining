@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./imageContent.css";
+import image2 from "../../assets/image2.jpg";
+import image2a from "../../assets/image2a.jpg";
 
 export default function ImageContentTwo() {
   const ref = useRef(null);
@@ -28,12 +30,16 @@ export default function ImageContentTwo() {
       {active && (
         <div className="imagesTwo">
           <div className="imageText">
-            <img src="image2.jpg" className="mainImageTwo" />
+            <img
+              src={image2}
+              className="mainImageTwo"
+              alt="Shining Stone Project"
+            />
             <div className="textImage">Shining Stone Project</div>
           </div>
 
           <div className="imageText">
-            <img src="image2a.jpg" className="addsImageTwo" />
+            <img src={image2a} className="addsImageTwo" alt="Shining Stone" />
             <div className="textImageAddsTwo">Shining Stone</div>
           </div>
         </div>

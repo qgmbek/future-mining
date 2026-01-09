@@ -1,5 +1,9 @@
 import "./Footer.css";
 
+import instagramIcon from "../../assets/instagram.svg";
+import facebookIcon from "../../assets/facebook.svg";
+import twitterIcon from "../../assets/t.svg";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -81,13 +85,13 @@ export default function Footer() {
           <h4>FOLLOW US</h4>
           <div className="icons">
             <span>
-              <img src="instagram.svg" alt="" className="icon" />
+              <img src={instagramIcon} alt="Instagram" className="icon" />
             </span>
             <span>
-              <img src="facebook.svg" alt="" className="icon" />
+              <img src={facebookIcon} alt="Facebook" className="icon" />
             </span>
             <span>
-              <img src="t.svg" alt="" className="icon" />
+              <img src={twitterIcon} alt="Twitter" className="icon" />
             </span>
           </div>
         </div>

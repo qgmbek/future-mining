@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import "./hero.css";
+import heroVideo from '../../assets/hero-video.mp4';
 
 export default function Hero() {
   return (
     <div className="hero">
       <video
-        src="/hero-video.mp4"
+        src={heroVideo}
         autoPlay
         loop
         muted
