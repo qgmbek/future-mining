@@ -3,7 +3,7 @@ import "./imageContent.css";
 import image2 from "../../assets/image2.jpg";
 import image2a from "../../assets/image2a.jpg";
 
-export default function ImageContentTwo() {
+export default function ImageTwo() {
   const ref = useRef(null);
   const [active, setActive] = useState(false);
 

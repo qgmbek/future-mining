@@ -4,7 +4,7 @@ import LogoMarquee from "./Components/LogoMarquee/LogoMarquess";
 import QuickFactsSection from "./Components/QuickFactsSection/QuickFactsSection";
 import VideoContent from "./Components/videoContent/VideoContent";
 import ImageContent from "./Components/imageContent/ImageContent";
-import ImageContentTwo from "./Components/imageContent/ImageContentTwo";
+import ImageTwo from "./Components/imageContent/ImageTwo";
 import Accordions from "./Components/Accordion/Accordion";
 import Footer from "./Components/Footer/footer";
 import "./App.css";
@@ -55,7 +55,7 @@ function App() {
       <VideoContent />
 
       <ImageContent />
-      <ImageContentTwo />
+      <ImageTwo />
 
       <Accordions />
 
