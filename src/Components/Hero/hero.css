@@ -4,10 +4,13 @@
   height: auto;
   overflow: hidden;
   height: auto;
+  margin-bottom: 0;
 }
 
 .video {
-  margin: 15px;
+  margin: 10px;
+  display: flex;
+  justify-self: center;
   width: calc(100% - 30px);
   border-radius: 26px;
 }
