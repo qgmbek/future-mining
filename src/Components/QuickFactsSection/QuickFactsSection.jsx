@@ -21,7 +21,6 @@ const QuickFactsSection = () => {
       <div className="container">
         <div className="section-header">
           <h2>Future Mining at a Glance</h2>
-          <div className="divider"></div>
         </div>
 
         <div className="facts-grid">
