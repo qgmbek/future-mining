@@ -1,0 +1,89 @@
+.cursor-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--warning);
+}
+
+.cursor-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-line {
+  position: absolute;
+  background: var(--warning);
+}
+
+.cursor-line.vertical {
+  width: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cursor-line.horizontal {
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cursor-brackets {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bracket {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-color: var(--warning);
+}
+
+.bracket.tl {
+  top: -1.5rem;
+  left: -1.5rem;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.bracket.tr {
+  top: -1.5rem;
+  right: -1.5rem;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.bracket.bl {
+  bottom: -1.5rem;
+  left: -1.5rem;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.bracket.br {
+  bottom: -1.5rem;
+  right: -1.5rem;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.cursor-coords {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: hsla(32, 100%, 50%, 0.6);
+}

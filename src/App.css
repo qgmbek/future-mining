@@ -31,3 +31,104 @@
 .letter.visible {
   opacity: 1;
 }
+
+:root {
+  --coal: hsl(0, 0%, 6%);
+  --background: hsl(0, 45%, 98%);
+  --warning: hsl(32, 100%, 50%);
+  --signal: hsl(48, 100%, 55%);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html, * {
+  cursor: none;
+}
+a:hover, button:hover{
+  cursor: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.grain-overlay {
+  pointer-events: none;
+}
+.btn-industrial {
+  cursor: pointer;
+}
+.text-hover-glow {
+  transition: all 0.3s ease;
+  position: relative;
+}
+.text-hover-glow:hover {
+  color: var(--warning);
+  text-shadow:
+    0 0 20px hsla(32, 100%, 50%, 0.5),
+    0 0 40px hsla(32, 100%, 50%, 0.3);
+}
+.text-hover-underline {
+  position: relative;
+  display: inline-block;
+}
+.text-hover-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--warning);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.text-hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.text-hover-split {
+  position: relative;
+  overflow: hidden;
+}
+.text-hover-split::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.text-hover-split:hover::before {
+  transform: translateY(-2px);
+}
+.text-mechanical {
+  transition:
+    letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.text-mechanical:hover {
+  letter-spacing: 0.15em;
+}
+.text-distort {
+  transition: transform 0.3s ease;
+}
+.text-distort:hover {
+  transform: skewX(-3deg) scale(1.02);
+}
+.group:hover .group-hover-scale {
+  transform: scale(1.05);
+}
+.group:hover .group-hover-opacity {
+  opacity: 1;
+}
+.group:hover .group-hover-border-warning {
+  border-color: var(--warning);
+}
+.group:hover .group-hover-text-warning {
+  color: var(--warning);
+}
