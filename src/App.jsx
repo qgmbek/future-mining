@@ -10,6 +10,9 @@ import "./App.css";
 
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 import DataMetrics from "./Components/DataMetrics/DataMetrics";
+import DepthExplorer from "./Components/DepthExplorer/DepthExplorer";
+import EquipmentShowcase from "./Components/EquipmentShowcase/EquipmentShowcase";
+import Timeline from "./Components/Timeline/Timeline";
 
 function App() {
   return (
@@ -21,10 +24,13 @@ function App() {
       <Introduction />
       <DataMetrics />
       <LogoMarquee />
+      <DepthExplorer />
       <VideoContent />
+      <EquipmentShowcase />
       <ImageContent />
       <ImageTwo />
       <Accordions />
+      <Timeline />
       <Footer />
     </>
   );

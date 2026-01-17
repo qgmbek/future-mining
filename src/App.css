@@ -5,6 +5,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 .hero {
@@ -42,6 +44,7 @@
 }
 
 html, * {
+  padding: 0;
   cursor: none;
 }
 a:hover, button:hover{
@@ -132,3 +135,4 @@ a:hover, button:hover{
 .group:hover .group-hover-text-warning {
   color: var(--warning);
 }
+

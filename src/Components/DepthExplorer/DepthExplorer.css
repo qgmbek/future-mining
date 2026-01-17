@@ -1,0 +1,161 @@
+.depth-section {
+  position: relative;
+  padding: 8rem 5rem;
+  margin-top: 200px;
+  border-radius: 36px;
+  overflow: hidden;
+  background-color: #000;
+  margin: 0;
+}
+
+/* Background */
+.depth-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+/* Rings */
+.depth-ring {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ring-large {
+  width: 600px;
+  height: 600px;
+  border: 2px solid hsla(32, 100%, 50%, 0.2);
+}
+
+.ring-small {
+  width: 500px;
+  height: 500px;
+  right: -8%;
+  border: 1px solid hsla(200, 80%, 45%, 0.3);
+}
+
+/* Markers */
+.depth-markers {
+  position: absolute;
+  left: 1rem;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  pointer-events: none;
+}
+
+.depth-marker {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: hsla(32, 100%, 50%, 0.5);
+}
+
+/* Header */
+.depth-header {
+  margin-bottom: 6rem;
+}
+
+.depth-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--warning);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.depth-title span {
+  display: inline-block;
+  margin-right: 0.3em;
+  color: hsl(45, 10%, 90%);
+  cursor: pointer;
+}
+
+/* Layers */
+.depth-layer {
+  position: relative;
+  border-top: 1px solid hsl(0, 0%, 18%);
+}
+
+.depth-layer-content {
+  padding: 4rem 0;
+}
+
+.depth-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.depth-col-depth {
+  grid-column: span 2;
+}
+.depth-col-title {
+  grid-column: span 4;
+}
+.depth-col-desc {
+  grid-column: span 5;
+}
+.depth-col-index {
+  grid-column: span 1;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 3.75rem;
+  font-weight: bold;
+  color: hsl(0, 0%, 18%);
+}
+
+.depth-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 55%);
+}
+
+.depth-value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.depth-col-title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: hsl(45, 10%, 90%);
+}
+
+.depth-col-desc p {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 55%);
+}
+
+/* Progress line */
+.depth-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+}
+
+/* Vertical line */
+.depth-vertical-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--warning),
+    hsl(200, 80%, 45%),
+    transparent
+  );
+  transform-origin: top;
+}
+
+
