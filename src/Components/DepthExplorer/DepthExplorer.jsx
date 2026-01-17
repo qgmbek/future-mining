@@ -103,7 +103,7 @@ const DepthExplorer = () => {
                 display: "inline-block",
                 marginRight: "0.3em",
                 cursor: "pointer",
-                color: "white"
+                color: "white",
               }}
               whileHover={{
                 y: -5,
@@ -131,21 +131,79 @@ const DepthExplorer = () => {
               >
                 <div className="depth-grid">
                   <div className="depth-col depth-col-depth">
-                    <span className="depth-label">DEPTH</span>
+                    <span className="depth-label">
+                      <motion.div
+                        whileHover={{ color: "var(--warning)", x: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        DEPTH
+                      </motion.div>
+                    </span>
                     <div className="depth-value" style={{ color: layer.color }}>
-                      {layer.depth}
+                      {layer.depth.split("").map((char, di) => (
+                        <motion.span
+                          key={di}
+                          style={{ display: "inline-block", cursor: "pointer" }}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.3 + di * 0.03, duration: 0.4 }}
+                          whileHover={{
+                            scale: 1.2,
+                            textShadow: "0 0 20px currentColor",
+                          }}
+                        >
+                          {char}
+                        </motion.span>
+                      ))}
                     </div>
                   </div>
 
                   <div className="depth-col depth-col-title">
-                    <h3>{layer.name}</h3>
+                    <motion.h3
+                      whileHover={{
+                        x: 10,
+                        color: "var(--warning)",
+                        letterSpacing: "0.05em",
+                      }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {layer.name}
+                    </motion.h3>
                   </div>
 
                   <div className="depth-col depth-col-desc">
-                    <p>{layer.description}</p>
+                    <p>
+                      {layer.description.split(" ").map((word, wi) => (
+                        <motion.span
+                          key={wi}
+                          style={{ marginRight: "0.4rem" }}
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.02 + wi * 0.03 }}
+                          whileHover={{ color: "#fff" }}
+                        >
+                          {word}
+                        </motion.span>
+                      ))}
+                    </p>
                   </div>
 
-                  <div className="depth-col depth-col-index">0{i + 1}</div>
+                  <div className="depth-col depth-col-index">
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6, duration: 0.5 }}
+                      whileHover={{
+                        color: "var(--warning)",
+                        scale: 1.1,
+                      }}
+                    >
+                      0{i + 1}
+                    </motion.span>
+                  </div>
                 </div>
               </motion.div>
             </div>
