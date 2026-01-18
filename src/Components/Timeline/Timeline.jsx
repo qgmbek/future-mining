@@ -307,7 +307,7 @@ const Timeline = () => {
                           marginRight: "0.25em",
                           cursor: "pointer",
                         }}
-                        whileHover={{ color: "hsl(45, 10%, 90%)" }}
+                        whileHover={{ color: "hsl(0, 0%, 0%)" }}
                       >
                         {word}
                       </motion.span>

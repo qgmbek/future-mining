@@ -154,6 +154,7 @@ export default function EquipmentShowcase() {
               <p className="description">
                 {equipmentData[activeIndex].description}
               </p>
+              
               <button className="btn-industrial">VIEW TECHNICAL SPECS</button>
             </div>
           </motion.div>

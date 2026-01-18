@@ -15,12 +15,12 @@
   border-radius: 26px;
 }
 
-.description {
+.hero-description {
   position: absolute;
   top: 42%;
   right: 5%;
   max-width: 300px;
-  color: #fff;
+  color: var(--warning);
   font-size: 18px;
   text-align: end;
 }

@@ -13,25 +13,35 @@ import DataMetrics from "./Components/DataMetrics/DataMetrics";
 import DepthExplorer from "./Components/DepthExplorer/DepthExplorer";
 import EquipmentShowcase from "./Components/EquipmentShowcase/EquipmentShowcase";
 import Timeline from "./Components/Timeline/Timeline";
+import Loader from "./Components/Loader";
+import { useState } from "react";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <>
       <CustomCursor />
-      <div className="hero">
-        <Hero />
-      </div>
-      <Introduction />
-      <DataMetrics />
-      <LogoMarquee />
-      <DepthExplorer />
-      <VideoContent />
-      <EquipmentShowcase />
-      <ImageContent />
-      <ImageTwo />
-      <Accordions />
-      <Timeline />
-      <Footer />
+      {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
+
+      {!isLoading && (
+        <>
+          <div className="hero">
+            <Hero />
+          </div>
+          <Introduction />
+          <DataMetrics />
+          <LogoMarquee />
+          <DepthExplorer />
+          <VideoContent />
+          <EquipmentShowcase />
+          <ImageContent />
+          <ImageTwo />
+          <Accordions />
+          <Timeline />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
