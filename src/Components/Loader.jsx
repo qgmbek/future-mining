@@ -165,7 +165,7 @@ const Loader = ({ onComplete }) => {
             >
               <motion.h1
                 className="text-massive"
-                style={{ color: "#fff", fontSize: "14rem" }}
+                style={{ color: "#fff", fontSize: "6rem" }}
                 initial={{ y: "100%", filter: "blur(10px)" }}
                 animate={{
                   y: phase === "revealing" ? "-10%" : 0,
@@ -173,7 +173,7 @@ const Loader = ({ onComplete }) => {
                 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               >
-                TERRA
+                FUTURE MINING
               </motion.h1>
             </motion.div>
 

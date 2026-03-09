@@ -11,6 +11,7 @@
   margin: 15px;
   width: calc(100% - 30px);
   border-radius: 26px;
+  opacity: 0.9;
 }
 
 .videoTitle {
@@ -22,7 +23,6 @@
   width: fit-content;
   max-width: 660px;
   color: var(--warning);
-  background-color: #ffffff98;
   border-radius: 12px;
   padding: 20px;
 }
